@@ -139,7 +139,32 @@ Usage:
 ```
 See the [scripts/](scripts/) folder as well.
 For info about the lesser used functions, please refer to the relevant reading. I don't use them, so I haven't documented them.
+## How use it
+----
+Start using it!
 
+In order to use this mod, you will need to SSH in to your web server. Note that you can only see the results of your commands the first time after iLO has been reset (no need to reset the rest of your box), and I don't know yet how the fan tables can be permanently applied (yet).
+
+Here are some useful things people have found:
+
+Turn your fans down the lazy way
+
+`fan p XX max YY (XX=fan #; ranges 0-5, YY=fan speed; ranges 0-255)` 
+Looking at all the settings in one swell swoop. Pay attention to the PID algorithms section and the GROUPINGS section (look for the stars).
+
+
+
+`fan info`
+Tweak the lower PID value of your system, especially for things that are causing your fans to go faster.
+
+
+
+`fan pid XX lo YYZZ`
+There's a good writeup on what you can do to set up your system; I would suggest reading this post to get some nuances for what to do with those values.
+
+Have fun!
+
+----
 ## Getting Involved
 Want to get involved? Check out [here](CONTRIBUTING.md)!
 
